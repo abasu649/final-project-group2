@@ -55,6 +55,15 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>MGLMapboxAccessToken</key>
+	<string>sk.eyJ1IjoiYW5kcmV3d3UwMTQiLCJhIjoiY2tsZTcwajc1MWgxcDJxcDk5NW9hMXlnaSJ9.JILXUHV-b_uNXT3LEkvOQw</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Your precise location is used to calculate turn-by-turn directions, show your location on the map, and help improve the map.</string>
+	<key>NSLocationTemporaryUsageDescriptionDictionary</key>
+	<dict>
+		<key>MGLAccuracyAuthorizationDescription</key>
+		<string>Please enable precise location. Turn-by-turn directions only work when precise location data is available.</string>
+	</dict>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
