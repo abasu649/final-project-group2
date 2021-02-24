@@ -10,10 +10,12 @@
 		49AC179625E1B48C008103E5 /* TrailMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AC179525E1B48C008103E5 /* TrailMapViewController.swift */; };
 		49C5862B25DC939600D8241A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C5862A25DC939600D8241A /* AppDelegate.swift */; };
 		49C5862D25DC939600D8241A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C5862C25DC939600D8241A /* SceneDelegate.swift */; };
-		49C5862F25DC939600D8241A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C5862E25DC939600D8241A /* ViewController.swift */; };
 		49C5863225DC939600D8241A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49C5863025DC939600D8241A /* Main.storyboard */; };
 		49C5863425DC939600D8241A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49C5863325DC939600D8241A /* Assets.xcassets */; };
 		49C5863725DC939600D8241A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49C5863525DC939600D8241A /* LaunchScreen.storyboard */; };
+		58B92D1F25E709F200311962 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B92D1E25E709F200311962 /* LoginViewController.swift */; };
+		58B92D2225E709FE00311962 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B92D2125E709FE00311962 /* RegisterViewController.swift */; };
+		58B92D2625E70B4300311962 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B92D2525E70B4300311962 /* Constants.swift */; };
 		C0385AF313F4A22AFD7767A0 /* Pods_439FinalProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9295D93B6A07734CCE5CFF /* Pods_439FinalProject.framework */; };
 /* End PBXBuildFile section */
 
@@ -22,11 +24,13 @@
 		49C5862725DC939600D8241A /* 439FinalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 439FinalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49C5862A25DC939600D8241A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49C5862C25DC939600D8241A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		49C5862E25DC939600D8241A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		49C5863125DC939600D8241A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		49C5863325DC939600D8241A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49C5863625DC939600D8241A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		49C5863825DC939600D8241A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		58B92D1E25E709F200311962 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		58B92D2125E709FE00311962 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		58B92D2525E70B4300311962 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		933F1A38496A9E9D1194D001 /* Pods-439FinalProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-439FinalProject.debug.xcconfig"; path = "Target Support Files/Pods-439FinalProject/Pods-439FinalProject.debug.xcconfig"; sourceTree = "<group>"; };
 		B6BB952AFCE52F4A841FE712 /* Pods-439FinalProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-439FinalProject.release.xcconfig"; path = "Target Support Files/Pods-439FinalProject/Pods-439FinalProject.release.xcconfig"; sourceTree = "<group>"; };
 		CE9295D93B6A07734CCE5CFF /* Pods_439FinalProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_439FinalProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,14 +80,41 @@
 			children = (
 				49C5862A25DC939600D8241A /* AppDelegate.swift */,
 				49C5862C25DC939600D8241A /* SceneDelegate.swift */,
-				49C5862E25DC939600D8241A /* ViewController.swift */,
-				49AC179525E1B48C008103E5 /* TrailMapViewController.swift */,
-				49C5863025DC939600D8241A /* Main.storyboard */,
+				58B92D1B25E6F7D600311962 /* Controllers */,
+				58B92D1A25E6F7CE00311962 /* Views */,
+				58B92D1425E6F77800311962 /* Models */,
 				49C5863325DC939600D8241A /* Assets.xcassets */,
 				49C5863525DC939600D8241A /* LaunchScreen.storyboard */,
 				49C5863825DC939600D8241A /* Info.plist */,
+				58B92D2525E70B4300311962 /* Constants.swift */,
 			);
 			path = 439FinalProject;
+			sourceTree = "<group>";
+		};
+		58B92D1425E6F77800311962 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			path = ../Models;
+			sourceTree = "<group>";
+		};
+		58B92D1A25E6F7CE00311962 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				49C5863025DC939600D8241A /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		58B92D1B25E6F7D600311962 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				49AC179525E1B48C008103E5 /* TrailMapViewController.swift */,
+				58B92D1E25E709F200311962 /* LoginViewController.swift */,
+				58B92D2125E709FE00311962 /* RegisterViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		EE6019F97EA8A8B28B5DE60E /* Frameworks */ = {
@@ -209,9 +240,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				49AC179625E1B48C008103E5 /* TrailMapViewController.swift in Sources */,
-				49C5862F25DC939600D8241A /* ViewController.swift in Sources */,
 				49C5862B25DC939600D8241A /* AppDelegate.swift in Sources */,
+				58B92D2225E709FE00311962 /* RegisterViewController.swift in Sources */,
+				58B92D1F25E709F200311962 /* LoginViewController.swift in Sources */,
 				49C5862D25DC939600D8241A /* SceneDelegate.swift in Sources */,
+				58B92D2625E70B4300311962 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
