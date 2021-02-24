@@ -25,6 +25,7 @@ class TrailMapViewController: UIViewController, MGLMapViewDelegate {
 
         let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
             guard let data = data else { return }
+            print("test")
             print(String(data: data, encoding: .utf8)!)
         }
 
