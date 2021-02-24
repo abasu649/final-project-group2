@@ -1,20 +1,32 @@
 PODS:
+  - AEXML (4.2.2)
+  - Alamofire (4.9.1)
   - Mapbox-iOS-SDK (6.3.0):
     - MapboxMobileEvents (~> 0.10.4)
   - MapboxMobileEvents (0.10.8)
+  - SwiftOverpass (1.0.3):
+    - AEXML (~> 4.2.2)
+    - Alamofire (~> 4.5)
 
 DEPENDENCIES:
   - Mapbox-iOS-SDK (~> 6.3.0)
+  - SwiftOverpass
 
 SPEC REPOS:
   trunk:
+    - AEXML
+    - Alamofire
     - Mapbox-iOS-SDK
     - MapboxMobileEvents
+    - SwiftOverpass
 
 SPEC CHECKSUMS:
+  AEXML: 5ebafc1b75e0bcf0f1b09b8ca8fed2d5a199479b
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   Mapbox-iOS-SDK: 2563ed87ead6ec08f1c2090873977b8a7be335a8
   MapboxMobileEvents: 36ff53b135aac486eed94b61f813c7967a0c2c6f
+  SwiftOverpass: 8c796d887465581359b8fd0b52aabdbdc0d1dd9b
 
-PODFILE CHECKSUM: 551d0f179a364b53cd6ce8b5d6d71cb84a638af9
+PODFILE CHECKSUM: 6ce60da32d81a77fb6f462aa260dbbba61ca7f85
 
 COCOAPODS: 1.10.1
