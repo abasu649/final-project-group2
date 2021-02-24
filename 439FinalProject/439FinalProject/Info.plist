@@ -68,5 +68,10 @@
 	<string>Shows your location on the map and helps improve the map</string>
     <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
     <string>Helps us keep track of your location when on a hike</string>
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSAllowsArbitraryLoads</key>
+        <true/>
+    </dict>
 </dict>
 </plist>
