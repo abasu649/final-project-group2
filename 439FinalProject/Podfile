@@ -1,4 +1,6 @@
 # Uncomment the next line to define a global platform for your project
+source 'https://github.com/CocoaPods/Specs'
+source 'https://github.com/twilio/cocoapod-specs'
 platform :ios, '14.4'
 
 target '439FinalProject' do
@@ -7,5 +9,5 @@ target '439FinalProject' do
 
   # Pods for 439FinalProject
   pod 'Mapbox-iOS-SDK', '~> 6.3.0'
-
+  pod 'TwilioChatClient', '~> 4.0'
 end

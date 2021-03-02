@@ -2,11 +2,15 @@ PODS:
   - Mapbox-iOS-SDK (6.3.0):
     - MapboxMobileEvents (~> 0.10.4)
   - MapboxMobileEvents (0.10.8)
+  - TwilioChatClient (4.1.0)
 
 DEPENDENCIES:
   - Mapbox-iOS-SDK (~> 6.3.0)
+  - TwilioChatClient (~> 4.0)
 
 SPEC REPOS:
+  https://github.com/CocoaPods/Specs:
+    - TwilioChatClient
   trunk:
     - Mapbox-iOS-SDK
     - MapboxMobileEvents
@@ -14,7 +18,8 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Mapbox-iOS-SDK: 2563ed87ead6ec08f1c2090873977b8a7be335a8
   MapboxMobileEvents: 36ff53b135aac486eed94b61f813c7967a0c2c6f
+  TwilioChatClient: 88217a65e6b5eeba81be09c49b7dec1210b1e9b9
 
-PODFILE CHECKSUM: f28e4a52a02a25dcd6d2dcc638584e578999f978
+PODFILE CHECKSUM: f365e5e6664d6cd04019169949d9518bb80e0139
 
 COCOAPODS: 1.10.1

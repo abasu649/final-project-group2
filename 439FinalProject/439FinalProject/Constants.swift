@@ -8,4 +8,5 @@
 struct Constants {
     static let loginSegue = "LoginToTrailMap"
     static let registerSegue = "RegisterToTrailMap"
+    static let TOKEN_URL = "http://localhost:3000/token"
 }
