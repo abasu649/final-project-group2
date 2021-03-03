@@ -10,6 +10,9 @@ import Mapbox
 
 class TrailMapViewController: UIViewController, MGLMapViewDelegate {
     
+    var trails:[Any] = []
+    var trailNames:[String] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
  
@@ -28,17 +31,42 @@ class TrailMapViewController: UIViewController, MGLMapViewDelegate {
     
     func mapViewDidFinishLoadingMap(_ mapView: MGLMapView) {
         mapView.setCenter((mapView.userLocation?.coordinate)!, animated: false)
-        //print("latitude: \(mapView.latitude), longitude: \(mapView.longitude)")
         let lat = mapView.latitude
         let lon = mapView.longitude
-        let box = [lon - 0.2526855444, lat - 0.4210251975, lon + 0.2526855444, lat + 0.4210251975]
-        let url = URL(string: "http://overpass-api.de/api/interpreter?data=[bbox];way[sac_scale=hiking];out;&bbox=\(box[0]),\(box[1]),\(box[2]),\(box[3])")!
+        let box = [lat - 0.4210251975, lon - 0.2526855444, lat + 0.4210251975, lon + 0.2526855444]
+        let url = URL(string: "https://www.overpass-api.de/api/interpreter?data=[out:json];way[highway=path](\(box[0]),\(box[1]),\(box[2]),\(box[3]));out%20geom;")!
+
         let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
             guard let data = data else { return }
-            print("test")
-            print(String(data: data, encoding: .utf8)!)
-        }
+            do {
+                // make sure this JSON is in the format we expect
+                if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
+                    // try to read out a string array
+                    if let elements = json["elements"] as? [[String:Any]]{
+                        for trail in elements{
+                            guard let trailTags = trail["tags"] as? [String:Any] else {return}
+                            let surfaceExists = trailTags["surface"] != nil
+                            let nameExists = trailTags["name"] != nil
+                            if nameExists && surfaceExists {
+                                guard let trailName = trailTags["name"] as? String else {return}
+                                if !self.trailNames.contains(trailName){
+                                    self.trails.append(trail)
+                                    self.trailNames.append(trailName)
+                                }
+                            }
+                        }
+                    }
+                    else{
+                        print("failed to read JSON")
+                    }
 
+                }
+            } catch let error as NSError {
+                print("Failed to load: \(error.localizedDescription)")
+            }
+            print(self.trails)
+            print(self.trailNames)
+        }
         task.resume()
     }
 }
