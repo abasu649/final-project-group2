@@ -1,4 +1,5 @@
 ${PODS_ROOT}/Target Support Files/Pods-439FinalProject/Pods-439FinalProject-frameworks.sh
 ${PODS_ROOT}/Mapbox-iOS-SDK/dynamic/Mapbox.framework
 ${BUILT_PRODUCTS_DIR}/MapboxMobileEvents/MapboxMobileEvents.framework
+${BUILT_PRODUCTS_DIR}/RAMAnimatedTabBarController/RAMAnimatedTabBarController.framework
 ${PODS_ROOT}/TwilioChatClient/TwilioChatClient.framework

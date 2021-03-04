@@ -10,4 +10,5 @@ target '439FinalProject' do
   # Pods for 439FinalProject
   pod 'Mapbox-iOS-SDK', '~> 6.3.0'
   pod 'TwilioChatClient', '~> 4.0'
+  pod 'RAMAnimatedTabBarController'
 end

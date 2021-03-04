@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6TG-sb-KsF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lnr-L8-2Oi">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -85,7 +85,6 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="testMapBox2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kwl-wG-F6Q"/>
-                                                    <segue destination="YUn-77-efD" kind="show" identifier="LoginToRegister" id="JTE-bC-S9h"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -124,20 +123,17 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="L8T-zS-GQD"/>
-                    <connections>
-                        <segue destination="SOV-MT-zPe" kind="show" identifier="LoginToTrailMap" id="Uez-38-iDL"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="28.985507246376812" y="88.392857142857139"/>
+            <point key="canvasLocation" x="-3514" y="-117"/>
         </scene>
         <!--Trail Map View Controller-->
         <scene sceneID="gfV-7c-1jq">
             <objects>
                 <viewController id="SOV-MT-zPe" customClass="TrailMapViewController" customModule="_39FinalProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="J2q-bF-wSO">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="fQd-By-o8h"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -146,7 +142,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GeG-t5-vqk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1071" y="88"/>
+            <point key="canvasLocation" x="-545" y="-117"/>
         </scene>
         <!--Trail Map View Controller-->
         <scene sceneID="5on-qc-sIS">
@@ -161,18 +157,40 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UY8-M1-qdq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2464" y="88"/>
+            <point key="canvasLocation" x="-1432" y="-117"/>
+        </scene>
+        <!--Message-->
+        <scene sceneID="m4l-XA-Tv4">
+            <objects>
+                <navigationController id="6Ht-8i-gNN" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Message" image="message" catalog="system" id="lk0-Xm-K41" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                        <connections>
+                            <outlet property="animation" destination="x13-nl-8Km" id="Ais-Kc-MID"/>
+                        </connections>
+                    </tabBarItem>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kcC-mq-cFg">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="MAh-0g-Pnp" kind="relationship" relationship="rootViewController" id="rKU-pu-scM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="si2-7m-aOo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <customObject id="x13-nl-8Km" customClass="RAMBounceAnimation" customModule="RAMAnimatedTabBarController"/>
+            </objects>
+            <point key="canvasLocation" x="-2320" y="615"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="LoC-98-k7B">
             <objects>
                 <viewController id="YUn-77-efD" userLabel="Register View Controller" customClass="RegisterViewController" customModule="_39FinalProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YbX-vD-AcQ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="PDZ-Hr-y4i">
-                                <rect key="frame" x="0.0" y="0.0" width="415.5" height="808"/>
+                                <rect key="frame" x="0.0" y="44" width="415.5" height="818"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Mp-Jf-uhE">
                                         <rect key="frame" x="0.0" y="0.0" width="415.5" height="409"/>
@@ -192,7 +210,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Q8-PR-u9a">
-                                        <rect key="frame" x="0.0" y="409" width="415.5" height="399"/>
+                                        <rect key="frame" x="0.0" y="409" width="415.5" height="409"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rVq-jh-Ixe">
                                                 <rect key="frame" x="83" y="50" width="249.5" height="36"/>
@@ -212,7 +230,7 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kZ2-02-YYQ">
-                                                <rect key="frame" x="82" y="235" width="249" height="36"/>
+                                                <rect key="frame" x="82" y="245" width="249" height="36"/>
                                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="36" id="hQm-D1-fnO"/>
@@ -258,13 +276,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="khj-Wl-Jjw"/>
-                    <connections>
-                        <segue destination="SOV-MT-zPe" kind="show" identifier="RegisterToTrailMap" id="Ica-0i-VyT"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uwQ-wt-R71" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="29" y="864"/>
+            <point key="canvasLocation" x="-2510" y="-834"/>
         </scene>
         <!--Chat View Controller-->
         <scene sceneID="WUb-Z7-12o">
@@ -345,6 +360,7 @@
                             <outletCollection property="gestureRecognizers" destination="hRc-kg-zN9" appends="YES" id="PQk-CQ-nlf"/>
                         </connections>
                     </view>
+                    <navigationItem key="navigationItem" id="Xm0-rW-2tX"/>
                     <connections>
                         <outlet property="bottomConstraint" destination="cjK-rC-6u7" id="V3d-qh-LzR"/>
                         <outlet property="tableView" destination="DWF-zW-8nm" id="hIi-gy-o7X"/>
@@ -358,13 +374,114 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1792.753623188406" y="620.75892857142856"/>
+            <point key="canvasLocation" x="-2320" y="1318"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="SjX-fU-Vl4">
+            <objects>
+                <viewController id="g0q-AN-VWR" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nhj-tb-VOF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="85Q-XJ-4kL"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="rRW-WB-5W2"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8xw-y6-ccy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <customObject id="z5g-td-oxP" customClass="RAMBounceAnimation" customModule="RAMAnimatedTabBarController"/>
+            </objects>
+            <point key="canvasLocation" x="-3975" y="1318"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="I1c-2J-ENk">
+            <objects>
+                <viewController id="phh-hF-GSx" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VBa-CP-Wj7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="IpR-9K-NPa"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Oia-EY-dyZ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="96b-Bz-3Yx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <customObject id="KjK-yO-HHi" customClass="RAMBounceAnimation" customModule="RAMAnimatedTabBarController"/>
+            </objects>
+            <point key="canvasLocation" x="-3171" y="1318"/>
+        </scene>
+        <!--Animated Tab Bar Controller-->
+        <scene sceneID="E9Y-bu-gwV">
+            <objects>
+                <tabBarController id="lnr-L8-2Oi" customClass="RAMAnimatedTabBarController" customModule="RAMAnimatedTabBarController" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="sag-rX-ntM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="61m-RK-EYB" kind="relationship" relationship="viewControllers" id="3cM-mf-AZk"/>
+                        <segue destination="6jD-zt-9vP" kind="relationship" relationship="viewControllers" id="eZf-Eu-lYL"/>
+                        <segue destination="6Ht-8i-gNN" kind="relationship" relationship="viewControllers" id="pLf-FU-GNm"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SLV-b3-qNG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2509" y="-117"/>
+        </scene>
+        <!--Post-->
+        <scene sceneID="io2-d2-n9j">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="61m-RK-EYB" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Post" image="square.and.pencil" catalog="system" id="CPL-59-1UH" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                        <connections>
+                            <outlet property="animation" destination="U6g-kZ-xqE" id="2Dt-rP-Wr0"/>
+                        </connections>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Z0m-4p-PAm">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="phh-hF-GSx" kind="relationship" relationship="rootViewController" id="1Ne-Az-5lz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hbP-vM-cyQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <customObject id="U6g-kZ-xqE" customClass="RAMBounceAnimation" customModule="RAMAnimatedTabBarController"/>
+            </objects>
+            <point key="canvasLocation" x="-3170" y="615"/>
+        </scene>
+        <!--Map-->
+        <scene sceneID="E7G-he-oBe">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6jD-zt-9vP" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Map" image="map" catalog="system" id="8A8-A2-oO5" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                        <connections>
+                            <outlet property="animation" destination="5RP-tp-Ph7" id="wSh-B7-7ZC"/>
+                        </connections>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZSr-OQ-VEX">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="g0q-AN-VWR" kind="relationship" relationship="rootViewController" id="hbS-hn-SYK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KmQ-sT-Qvu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <customObject id="5RP-tp-Ph7" customClass="RAMBounceAnimation" customModule="RAMAnimatedTabBarController"/>
+            </objects>
+            <point key="canvasLocation" x="-3975.36231884058" y="615.40178571428567"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="Uez-38-iDL"/>
-    </inferredMetricsTieBreakers>
     <resources>
+        <image name="map" catalog="system" width="128" height="110"/>
+        <image name="message" catalog="system" width="128" height="113"/>
+        <image name="square.and.pencil" catalog="system" width="128" height="115"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

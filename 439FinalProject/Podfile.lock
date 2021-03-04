@@ -2,14 +2,17 @@ PODS:
   - Mapbox-iOS-SDK (6.3.0):
     - MapboxMobileEvents (~> 0.10.4)
   - MapboxMobileEvents (0.10.8)
+  - RAMAnimatedTabBarController (5.2.0)
   - TwilioChatClient (4.1.0)
 
 DEPENDENCIES:
   - Mapbox-iOS-SDK (~> 6.3.0)
+  - RAMAnimatedTabBarController
   - TwilioChatClient (~> 4.0)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs:
+    - RAMAnimatedTabBarController
     - TwilioChatClient
   trunk:
     - Mapbox-iOS-SDK
@@ -18,8 +21,9 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Mapbox-iOS-SDK: 2563ed87ead6ec08f1c2090873977b8a7be335a8
   MapboxMobileEvents: 36ff53b135aac486eed94b61f813c7967a0c2c6f
+  RAMAnimatedTabBarController: 6863a386e7ae2ab227cd60aa73ab8ff56cdacfdd
   TwilioChatClient: 88217a65e6b5eeba81be09c49b7dec1210b1e9b9
 
-PODFILE CHECKSUM: f365e5e6664d6cd04019169949d9518bb80e0139
+PODFILE CHECKSUM: 1c331ea6bc5c92094dc96bd9c553965f4821ff0a
 
 COCOAPODS: 1.10.1
