@@ -6,13 +6,17 @@
 //
 
 import UIKit
-
+import FirebaseDatabase
+ 
 class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        let ref = Database.database().reference()
+        //ref.child("id/username").setValue("toirdak")
+        ref.childByAutoId().setValue(["username": "Tori", "password": "Summer@1"])
     }
     
 

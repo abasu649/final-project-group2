@@ -21,6 +21,7 @@
 		58D1F57225EDDDA5003909E5 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D1F57125EDDDA5003909E5 /* SessionManager.swift */; };
 		58D1F57C25EDDE08003909E5 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D1F57B25EDDE08003909E5 /* ChatViewController.swift */; };
 		58D1F59725EDE127003909E5 /* ChatManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D1F59625EDE127003909E5 /* ChatManager.swift */; };
+		82752EC325F5AD5A002B04AE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 82752EC225F5AD5A002B04AE /* GoogleService-Info.plist */; };
 		C0385AF313F4A22AFD7767A0 /* Pods_439FinalProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9295D93B6A07734CCE5CFF /* Pods_439FinalProject.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,7 @@
 		58D1F57125EDDDA5003909E5 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		58D1F57B25EDDE08003909E5 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		58D1F59625EDE127003909E5 /* ChatManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatManager.swift; sourceTree = "<group>"; };
+		82752EC225F5AD5A002B04AE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		933F1A38496A9E9D1194D001 /* Pods-439FinalProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-439FinalProject.debug.xcconfig"; path = "Target Support Files/Pods-439FinalProject/Pods-439FinalProject.debug.xcconfig"; sourceTree = "<group>"; };
 		B6BB952AFCE52F4A841FE712 /* Pods-439FinalProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-439FinalProject.release.xcconfig"; path = "Target Support Files/Pods-439FinalProject/Pods-439FinalProject.release.xcconfig"; sourceTree = "<group>"; };
 		CE9295D93B6A07734CCE5CFF /* Pods_439FinalProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_439FinalProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,6 +90,7 @@
 		49C5862925DC939600D8241A /* 439FinalProject */ = {
 			isa = PBXGroup;
 			children = (
+				82752EC225F5AD5A002B04AE /* GoogleService-Info.plist */,
 				58D1F59525EDE10A003909E5 /* Models */,
 				58D1F57025EDDDA5003909E5 /* Session */,
 				58D1F56825EDDD6C003909E5 /* Utils */,
@@ -215,6 +218,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				49C5863725DC939600D8241A /* LaunchScreen.storyboard in Resources */,
+				82752EC325F5AD5A002B04AE /* GoogleService-Info.plist in Resources */,
 				49C5863425DC939600D8241A /* Assets.xcassets in Resources */,
 				49C5863225DC939600D8241A /* Main.storyboard in Resources */,
 			);

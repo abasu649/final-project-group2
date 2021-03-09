@@ -7,6 +7,7 @@
 
 //import SwiftOverpass
 import Mapbox
+import FirebaseDatabase
 
 class TrailMapViewController: UIViewController, MGLMapViewDelegate {
     
@@ -23,6 +24,9 @@ class TrailMapViewController: UIViewController, MGLMapViewDelegate {
         mapView.showsUserLocation = true
         mapView.delegate = self
         view.addSubview(mapView)
+        let ref = Database.database().reference()
+        //ref.child("id/username").setValue("toirdak")
+        ref.childByAutoId().setValue(["username": "Tori", "password": "Summer@1"])
     }
     
     //Zoom into marker when tapped
