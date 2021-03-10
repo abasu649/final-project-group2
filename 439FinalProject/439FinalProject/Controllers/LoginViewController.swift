@@ -7,27 +7,40 @@
 
 import UIKit
 import FirebaseDatabase
+import Firebase
  
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var emailText: UITextField!
+    @IBOutlet weak var passwordText: UITextField!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.isNavigationBarHidden = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.isNavigationBarHidden = false
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        let ref = Database.database().reference()
-        //ref.child("id/username").setValue("toirdak")
-        ref.childByAutoId().setValue(["username": "Tori", "password": "Summer@1"])
+    }
+    @IBAction func loginPressed(_ sender: UIButton) {
+        if let email = emailText.text, let password = passwordText.text {
+            Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
+                if let e = error {
+                    print(e)
+                } else {
+                    self.performSegue(withIdentifier: Constants.loginSegue, sender: self)
+                }
+            }
+        }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
