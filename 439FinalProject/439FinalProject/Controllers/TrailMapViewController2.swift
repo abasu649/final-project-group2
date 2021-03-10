@@ -141,25 +141,25 @@ class ViewController: UIViewController, MGLMapViewDelegate {
         return true
     }
 
-    func mapView(_ mapView: MGLMapView, calloutViewFor annotation: MGLAnnotation) -> MGLCalloutView? {
-    // Instantiate and return our custom callout view.
-        return CustomCalloutView(representedObject: annotation)
-    }
+//    func mapView(_ mapView: MGLMapView, calloutViewFor annotation: MGLAnnotation) -> MGLCalloutView? {
+//    // Instantiate and return our custom callout view.
+//        return CustomCalloutView(representedObject: annotation)
+//    }
     
     ///TODO: use the changing zoom level to change "around" query parameter in API call
-    func mapViewRegionIsChanging(_ mapView: MGLMapView) {
-        //print(mapView.zoomLevel, "")
-    }
+//    func mapViewRegionIsChanging(_ mapView: MGLMapView) {
+//        //print(mapView.zoomLevel, "")
+//    }
     
     ///TODO: as maap camera changes, new trails and markers should populate map and old markers should disappear
-    func mapView(_ mapView: MGLMapView, shouldChangeFrom oldCamera: MGLMapCamera, to newCamera: MGLMapCamera) -> Bool {
-//        let apiUrl = "https://trails-data.herokuapp.com/data?lat=\(newCamera.centerCoordinate.latitude)&lon=\(newCamera.centerCoordinate.longitude)"
-//        let url = URL(string: apiUrl)!
-//        parseGeojson(url: url)
-//
-//
-//        return true
-    }
+//    func mapView(_ mapView: MGLMapView, shouldChangeFrom oldCamera: MGLMapCamera, to newCamera: MGLMapCamera) -> Bool {
+////        let apiUrl = "https://trails-data.herokuapp.com/data?lat=\(newCamera.centerCoordinate.latitude)&lon=\(newCamera.centerCoordinate.longitude)"
+////        let url = URL(string: apiUrl)!
+////        parseGeojson(url: url)
+////
+////
+////        return true
+//    }
 
 }
 ///TODO: fix highway=path in app.py

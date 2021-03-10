@@ -20,7 +20,7 @@ class TrailMapViewController: UIViewController, MGLMapViewDelegate {
         let urlStyle = URL(string: "mapbox://styles/mapbox/streets-v11")
         let mapView = MGLMapView(frame: view.bounds, styleURL: urlStyle)
         mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        mapView.setCenter(CLLocationCoordinate2D(latitude: 37.33233, longitude: -122.03122), zoomLevel: 9, animated: false)
+        mapView.setCenter(CLLocationCoordinate2D(latitude: 37.33233, longitude: -122.03122), zoomLevel: 10, animated: false)
         mapView.showsUserLocation = true
         mapView.delegate = self
         view.addSubview(mapView)
@@ -44,9 +44,12 @@ class TrailMapViewController: UIViewController, MGLMapViewDelegate {
     //Load data when map is finished loading
     func mapViewDidFinishLoadingMap(_ mapView: MGLMapView) {
         mapView.setCenter((mapView.userLocation?.coordinate)!, animated: false)
-        let lat = mapView.latitude
-        let lon = mapView.longitude
-        let box = [lat - 0.4210251975, lon - 0.2526855444, lat + 0.4210251975, lon + 0.2526855444]
+        //get bounding box based on the coordinate bounds of the visible map
+        let latSW = mapView.visibleCoordinateBounds.sw.latitude
+        let lonSW = mapView.visibleCoordinateBounds.sw.longitude
+        let latNE = mapView.visibleCoordinateBounds.ne.latitude
+        let lonNE = mapView.visibleCoordinateBounds.ne.longitude
+        let box = [latSW, lonSW, latNE, lonNE]
         let url = URL(string: "https://www.overpass-api.de/api/interpreter?data=[out:json];way[highway=path](\(box[0]),\(box[1]),\(box[2]),\(box[3]));out%20geom;")!
 
         let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
@@ -81,8 +84,6 @@ class TrailMapViewController: UIViewController, MGLMapViewDelegate {
             for trail in self.trails {
                 guard let trailLocations = trail["geometry"] as? [[String:Any]] else {return}
                 guard let trailTags = trail["tags"] as? [String:Any] else {return}
-                //guard let trailNameDirty = trailTags["name"] as? String else {return}
-                //let trailName = trailNameDirty.replacingOccurrences( of:"[^A-Za-z0-9]+", with: " ", options: .regularExpression)
                 guard let trailName = trailTags["name"] as? String else {return}
                 guard let trailLat = trailLocations[0]["lat"] as? Double else {return}
                 guard let trailLon = trailLocations[0]["lon"] as? Double else {return}
