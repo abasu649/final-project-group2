@@ -10,7 +10,7 @@ class SessionManager {
     static let IsLoggedInKey: String = "false"
     static let defaults = UserDefaults.standard
     
-    class func loginWithUsername(username:String) {
+    class func setCredentail(username:String) {
         defaults.set(username, forKey: UsernameKey)
         defaults.set(true, forKey: IsLoggedInKey)
         defaults.synchronize()
