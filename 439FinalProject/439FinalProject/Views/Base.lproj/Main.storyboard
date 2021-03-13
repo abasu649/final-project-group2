@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -443,7 +444,7 @@
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bN0-h7-B7m">
                                                 <rect key="frame" x="80" y="166" width="254" height="34"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="254" id="xES-w1-5RH"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="255" id="xES-w1-5RH"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -476,7 +477,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cm7-fA-wNm">
                                         <rect key="frame" x="59.5" y="225.5" width="295" height="226"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O8R-MY-6n3">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O8R-MY-6n3" customClass="PhoneNumberTextField" customModule="PhoneNumberKit">
                                                 <rect key="frame" x="20" y="48.5" width="255" height="35"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits" textContentType="tel"/>
@@ -495,6 +496,7 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="modifyICE:" destination="DJY-iK-Hwt" eventType="touchUpInside" id="RdH-gP-sHs"/>
+                                                    <segue destination="P6o-DZ-HeJ" kind="show" id="s8p-XA-cpN"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -558,13 +560,69 @@
                     </view>
                     <navigationItem key="navigationItem" id="UKT-oi-iGe"/>
                     <connections>
-                        <outlet property="ICETextField" destination="O8R-MY-6n3" id="kck-37-kKW"/>
                         <outlet property="UsernameTextField" destination="bN0-h7-B7m" id="d01-j7-n5X"/>
+                        <outlet property="phoneNumber" destination="O8R-MY-6n3" id="WVn-3n-WGo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LgM-bk-mym" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1478.2608695652175" y="1342.6339285714284"/>
+        </scene>
+        <!--AddPhoneNumber-->
+        <scene sceneID="XgH-Nu-txt">
+            <objects>
+                <viewController id="P6o-DZ-HeJ" userLabel="AddPhoneNumber" customClass="AddPhoneViewController" customModule="_39FinalProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Bfl-Yw-0CW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone number " textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fd4-fc-uQW" customClass="PhoneNumberTextField" customModule="PhoneNumberKit">
+                                <rect key="frame" x="44" y="276" width="326" height="38.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="326" id="9hV-6p-aPj"/>
+                                    <constraint firstAttribute="height" constant="38.5" id="ESc-cC-5Ym"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="tRt-KN-S1C">
+                                <rect key="frame" x="146" y="405" width="123" height="52"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="Lk2-u1-QnV"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="123" id="gXV-Eo-iYX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Confrim">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <imageReference key="image" image="arrow.right" catalog="system" symbolScale="large"/>
+                                </state>
+                                <connections>
+                                    <action selector="addPhoneNumber:" destination="P6o-DZ-HeJ" eventType="touchUpInside" id="cbg-xE-Cml"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xfJ-h8-KJm"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="tRt-KN-S1C" firstAttribute="leading" secondItem="xfJ-h8-KJm" secondAttribute="leading" constant="146" id="Mj4-Ox-V3a"/>
+                            <constraint firstItem="Fd4-fc-uQW" firstAttribute="top" secondItem="xfJ-h8-KJm" secondAttribute="top" constant="188" id="bJ0-W4-sAU"/>
+                            <constraint firstItem="xfJ-h8-KJm" firstAttribute="trailing" secondItem="Fd4-fc-uQW" secondAttribute="trailing" constant="44" id="f6N-C7-C9V"/>
+                            <constraint firstItem="tRt-KN-S1C" firstAttribute="top" secondItem="Fd4-fc-uQW" secondAttribute="bottom" constant="90.5" id="m6F-y8-3R4"/>
+                            <constraint firstItem="Fd4-fc-uQW" firstAttribute="leading" secondItem="xfJ-h8-KJm" secondAttribute="leading" constant="44" id="v8C-na-6O7"/>
+                            <constraint firstItem="xfJ-h8-KJm" firstAttribute="bottom" secondItem="tRt-KN-S1C" secondAttribute="bottom" constant="356" id="xtB-b8-BnA"/>
+                            <constraint firstItem="xfJ-h8-KJm" firstAttribute="trailing" secondItem="tRt-KN-S1C" secondAttribute="trailing" constant="145" id="yAr-cm-YBu"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ao3-5Q-tQv"/>
+                    <connections>
+                        <outlet property="phoneNumber" destination="Fd4-fc-uQW" id="row-YB-tgU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="373-ED-VQw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-714.49275362318849" y="1342.6339285714284"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="SjX-fU-Vl4">
@@ -671,6 +729,7 @@
         <!--Navigation Controller-->
         <scene sceneID="8xj-A1-1y9">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ijo-b4-nST" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="O4y-OA-g1Z" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="2J9-HF-wbx">
@@ -682,15 +741,15 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="QJE-tD-61B"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ijo-b4-nST" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-3709" y="-133"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="j9Z-vm-WRR"/>
+        <segue reference="S3k-tC-cGQ"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="arrow.right" catalog="system" width="128" height="98"/>
         <image name="map" catalog="system" width="128" height="110"/>
         <image name="message" catalog="system" width="128" height="113"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
@@ -706,6 +765,9 @@
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

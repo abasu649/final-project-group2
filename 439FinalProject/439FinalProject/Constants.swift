@@ -13,5 +13,6 @@ struct Constants {
         static let collectionName = "users"
         static let username = "username"
         static let uid = "uid"
+        static let phoneNumber = "phoneNumber"
     }
 }

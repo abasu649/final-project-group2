@@ -6,13 +6,27 @@
 //
 
 import UIKit
-
+import Firebase
+import PhoneNumberKit
 class ProfileViewController: UIViewController {
-
+    
     @IBOutlet weak var UsernameTextField: UITextField!
-    @IBOutlet weak var ICETextField: UITextField!
+    
+    @IBOutlet weak var phoneNumber: PhoneNumberTextField!
+    let db = Firestore.firestore()
+    let phoneNumberKit = PhoneNumberKit()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.isNavigationBarHidden = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.isNavigationBarHidden = false
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        getUserData()
 
         // Do any additional setup after loading the view.
     }
@@ -21,6 +35,33 @@ class ProfileViewController: UIViewController {
     }
     
     @IBAction func modifyICE(_ sender: UIButton) {
+    }
+    
+    func getUserData() {
+        if let user = Auth.auth().currentUser {
+            db.collection("users").getDocuments() { (querySnapshot, err) in
+                        if let err = err {
+                            print("Error getting documents: \(err)")
+                        } else {
+                            for document in querySnapshot!.documents {
+                                if let uid = document.data()["uid"] {
+                                    if(uid as! String == user.uid) {
+                                        self.UsernameTextField.text = document.data()["username"] as? String
+                                        if (document.data()["phoneNumber"] != nil) {
+                                            do {
+                                                let number = try self.phoneNumberKit.parse(document.data()["phoneNumber"] as! String)
+                                                self.phoneNumber.text = self.phoneNumberKit.format(number, toType: .national)
+                                            }
+                                            catch {
+                                                print("Generic parser error")
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+        }
     }
     /*
     // MARK: - Navigation

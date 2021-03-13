@@ -1,6 +1,7 @@
 # Uncomment the next line to define a global platform for your project
 source 'https://github.com/CocoaPods/Specs'
 source 'https://github.com/twilio/cocoapod-specs'
+source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '14.4'
 
 target '439FinalProject' do
@@ -15,4 +16,5 @@ target '439FinalProject' do
   pod 'Firebase/Database'
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
+  pod 'PhoneNumberKit', '~> 3.3'
 end

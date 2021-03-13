@@ -23,6 +23,7 @@
 		58D1F60225F91E64003909E5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D1F60125F91E64003909E5 /* LoginViewController.swift */; };
 		58D1F60625F924AE003909E5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 58D1F60525F924AE003909E5 /* GoogleService-Info.plist */; };
 		58D1F62325FAAF0B003909E5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D1F62225FAAF0B003909E5 /* ProfileViewController.swift */; };
+		58D1F62625FC5989003909E5 /* AddPhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D1F62525FC5989003909E5 /* AddPhoneViewController.swift */; };
 		C0385AF313F4A22AFD7767A0 /* Pods_439FinalProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9295D93B6A07734CCE5CFF /* Pods_439FinalProject.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,7 @@
 		58D1F60125F91E64003909E5 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		58D1F60525F924AE003909E5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		58D1F62225FAAF0B003909E5 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		58D1F62525FC5989003909E5 /* AddPhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhoneViewController.swift; sourceTree = "<group>"; };
 		933F1A38496A9E9D1194D001 /* Pods-439FinalProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-439FinalProject.debug.xcconfig"; path = "Target Support Files/Pods-439FinalProject/Pods-439FinalProject.debug.xcconfig"; sourceTree = "<group>"; };
 		B6BB952AFCE52F4A841FE712 /* Pods-439FinalProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-439FinalProject.release.xcconfig"; path = "Target Support Files/Pods-439FinalProject/Pods-439FinalProject.release.xcconfig"; sourceTree = "<group>"; };
 		CE9295D93B6A07734CCE5CFF /* Pods_439FinalProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_439FinalProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,6 +127,7 @@
 				58B92D2125E709FE00311962 /* RegisterViewController.swift */,
 				291706EB25EDF3A20085D0C8 /* TrailMapViewController2.swift */,
 				58D1F62225FAAF0B003909E5 /* ProfileViewController.swift */,
+				58D1F62525FC5989003909E5 /* AddPhoneViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -284,6 +287,7 @@
 				49C5862D25DC939600D8241A /* SceneDelegate.swift in Sources */,
 				58D1F62325FAAF0B003909E5 /* ProfileViewController.swift in Sources */,
 				58B92D2625E70B4300311962 /* Constants.swift in Sources */,
+				58D1F62625FC5989003909E5 /* AddPhoneViewController.swift in Sources */,
 				58D1F57225EDDDA5003909E5 /* SessionManager.swift in Sources */,
 				58D1F57C25EDDE08003909E5 /* ChatViewController.swift in Sources */,
 				291706EC25EDF3A20085D0C8 /* TrailMapViewController2.swift in Sources */,

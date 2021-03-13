@@ -60,15 +60,14 @@ class RegisterViewController: UIViewController {
     func storeToFStore (username:String) {
         let user = Auth.auth().currentUser
         if let user = user {
-            var ref: DocumentReference? = nil
-            ref = db.collection(Constants.FStoreUser.collectionName).addDocument(data: [
+            db.collection(Constants.FStoreUser.collectionName).document(user.uid).setData([
                 Constants.FStoreUser.uid: user.uid,
                 Constants.FStoreUser.username: username,
             ]) { err in
                 if let err = err {
                     print("Error adding document: \(err)")
                 } else {
-                    print("Document added with ID: \(ref!.documentID)")
+                    print("Document added")
                 }
             }
         }
