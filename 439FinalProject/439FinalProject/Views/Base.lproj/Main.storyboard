@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="O4y-OA-g1Z">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -137,7 +137,7 @@
                     <connections>
                         <outlet property="emailText" destination="CN1-4D-NeA" id="7CB-IJ-d8j"/>
                         <outlet property="passwordText" destination="jZT-uK-Hd8" id="03z-7u-c0q"/>
-                        <segue destination="lnr-L8-2Oi" kind="show" identifier="LoginToHomePage" id="S3k-tC-cGQ"/>
+                        <segue destination="lnr-L8-2Oi" kind="presentation" identifier="LoginToHomePage" modalPresentationStyle="fullScreen" id="S3k-tC-cGQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -442,7 +442,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="225.5"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bN0-h7-B7m">
-                                                <rect key="frame" x="80" y="166" width="254" height="34"/>
+                                                <rect key="frame" x="80" y="166" width="255" height="34"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="255" id="xES-w1-5RH"/>
                                                 </constraints>
@@ -450,7 +450,7 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a8c-Ue-tZ9">
-                                                <rect key="frame" x="165.5" y="137.5" width="83" height="20.5"/>
+                                                <rect key="frame" x="166" y="137.5" width="83" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -662,6 +662,7 @@
         <scene sceneID="E9Y-bu-gwV">
             <objects>
                 <tabBarController id="lnr-L8-2Oi" customClass="RAMAnimatedTabBarController" customModule="RAMAnimatedTabBarController" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="IhQ-ze-iy4"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="sag-rX-ntM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -729,7 +730,6 @@
         <!--Navigation Controller-->
         <scene sceneID="8xj-A1-1y9">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ijo-b4-nST" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="O4y-OA-g1Z" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="2J9-HF-wbx">
@@ -741,6 +741,7 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="QJE-tD-61B"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ijo-b4-nST" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-3709" y="-133"/>
         </scene>
