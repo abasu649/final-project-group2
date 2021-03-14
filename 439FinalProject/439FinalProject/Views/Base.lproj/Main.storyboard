@@ -144,37 +144,6 @@
             </objects>
             <point key="canvasLocation" x="-2781" y="-127"/>
         </scene>
-        <!--Trail Map View Controller-->
-        <scene sceneID="gfV-7c-1jq">
-            <objects>
-                <viewController id="SOV-MT-zPe" customClass="TrailMapViewController" customModule="_39FinalProject" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="J2q-bF-wSO">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="fQd-By-o8h"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="c4W-WH-gHE"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GeG-t5-vqk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="363.768115942029" y="-117.1875"/>
-        </scene>
-        <!--Trail Map View Controller-->
-        <scene sceneID="5on-qc-sIS">
-            <objects>
-                <viewController id="6TG-sb-KsF" customClass="TrailMapViewController" customModule="_39FinalProject" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="xvT-ic-7GO">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="Bc7-3Z-V8u"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="UY8-M1-qdq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-594" y="-133"/>
-        </scene>
         <!--Profile-->
         <scene sceneID="Zqs-jb-Vev">
             <objects>
@@ -624,17 +593,17 @@
             </objects>
             <point key="canvasLocation" x="-714.49275362318849" y="1342.6339285714284"/>
         </scene>
-        <!--View Controller-->
+        <!--Trails Near You-->
         <scene sceneID="SjX-fU-Vl4">
             <objects>
-                <viewController id="g0q-AN-VWR" sceneMemberID="viewController">
+                <viewController id="g0q-AN-VWR" customClass="TrailMapViewController" customModule="_39FinalProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nhj-tb-VOF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="85Q-XJ-4kL"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="rRW-WB-5W2"/>
+                    <navigationItem key="navigationItem" title="Trails Near You" id="rRW-WB-5W2"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8xw-y6-ccy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <customObject id="z5g-td-oxP" customClass="RAMBounceAnimation" customModule="RAMAnimatedTabBarController"/>

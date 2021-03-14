@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		291706EC25EDF3A20085D0C8 /* TrailMapViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291706EB25EDF3A20085D0C8 /* TrailMapViewController2.swift */; };
+		2972F42425FE66930070FCBD /* LoadingButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2972F42325FE66930070FCBD /* LoadingButtonView.swift */; };
+		2972F42725FE66BA0070FCBD /* CustomCalloutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2972F42625FE66BA0070FCBD /* CustomCalloutView.swift */; };
 		4946942A25FD61430076D19D /* CreateHikeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4946942925FD61430076D19D /* CreateHikeViewController.swift */; };
 		49AC179625E1B48C008103E5 /* TrailMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AC179525E1B48C008103E5 /* TrailMapViewController.swift */; };
 		49C5862B25DC939600D8241A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C5862A25DC939600D8241A /* AppDelegate.swift */; };
@@ -29,7 +30,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		291706EB25EDF3A20085D0C8 /* TrailMapViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailMapViewController2.swift; sourceTree = "<group>"; };
+		2972F42325FE66930070FCBD /* LoadingButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingButtonView.swift; sourceTree = "<group>"; };
+		2972F42625FE66BA0070FCBD /* CustomCalloutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCalloutView.swift; sourceTree = "<group>"; };
 		4946942925FD61430076D19D /* CreateHikeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateHikeViewController.swift; sourceTree = "<group>"; };
 		49AC179525E1B48C008103E5 /* TrailMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailMapViewController.swift; sourceTree = "<group>"; };
 		49C5862725DC939600D8241A /* 439FinalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 439FinalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,6 +118,8 @@
 			isa = PBXGroup;
 			children = (
 				49C5863025DC939600D8241A /* Main.storyboard */,
+				2972F42325FE66930070FCBD /* LoadingButtonView.swift */,
+				2972F42625FE66BA0070FCBD /* CustomCalloutView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -127,7 +131,6 @@
 				58D1F57B25EDDE08003909E5 /* ChatViewController.swift */,
 				49AC179525E1B48C008103E5 /* TrailMapViewController.swift */,
 				58B92D2125E709FE00311962 /* RegisterViewController.swift */,
-				291706EB25EDF3A20085D0C8 /* TrailMapViewController2.swift */,
 				58D1F62225FAAF0B003909E5 /* ProfileViewController.swift */,
 				58D1F62525FC5989003909E5 /* AddPhoneViewController.swift */,
 				4946942925FD61430076D19D /* CreateHikeViewController.swift */,
@@ -291,9 +294,10 @@
 				58D1F62325FAAF0B003909E5 /* ProfileViewController.swift in Sources */,
 				58B92D2625E70B4300311962 /* Constants.swift in Sources */,
 				58D1F62625FC5989003909E5 /* AddPhoneViewController.swift in Sources */,
+				2972F42725FE66BA0070FCBD /* CustomCalloutView.swift in Sources */,
+				2972F42425FE66930070FCBD /* LoadingButtonView.swift in Sources */,
 				58D1F57225EDDDA5003909E5 /* SessionManager.swift in Sources */,
 				58D1F57C25EDDE08003909E5 /* ChatViewController.swift in Sources */,
-				291706EC25EDF3A20085D0C8 /* TrailMapViewController2.swift in Sources */,
 				58D1F60225F91E64003909E5 /* LoginViewController.swift in Sources */,
 				4946942A25FD61430076D19D /* CreateHikeViewController.swift in Sources */,
 			);
