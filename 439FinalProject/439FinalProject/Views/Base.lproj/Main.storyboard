@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="phh-hF-GSx">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -618,56 +618,104 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" fixedFrame="YES" placeholder="Enter Trail Name" translatesAutoresizingMaskIntoConstraints="NO" id="1Sk-Sh-1YI">
-                                <rect key="frame" x="0.0" y="88" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="kaW-cc-njK">
-                                <rect key="frame" x="0.0" y="188" width="414" height="162"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </datePicker>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter preferred group size" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GfC-tc-C7h">
-                                <rect key="frame" x="93" y="399" width="229" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date &amp; Time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lDl-VK-SPH">
-                                <rect key="frame" x="20" y="132" width="335" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Group Size" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bFS-Ve-ej5">
-                                <rect key="frame" x="20" y="343" width="335" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Miscellaneous Details" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hht-Xx-4ML">
-                                <rect key="frame" x="20" y="452" width="234" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Enter any other details" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dW6-qf-Vh4">
-                                <rect key="frame" x="22" y="506" width="372" height="285"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="juA-dh-AEF">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J2p-FB-bsM" userLabel="ContentView">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="800"/>
+                                        <subviews>
+                                            <searchBar contentMode="redraw" placeholder="Search for trails" translatesAutoresizingMaskIntoConstraints="NO" id="bFr-AD-Oxr">
+                                                <rect key="frame" x="7" y="0.0" width="398" height="56"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </searchBar>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date &amp; Time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fqq-8v-33w">
+                                                <rect key="frame" x="20" y="75" width="335" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="inline" translatesAutoresizingMaskIntoConstraints="NO" id="xgA-yn-Phz">
+                                                <rect key="frame" x="46" y="113" width="306" height="340"/>
+                                            </datePicker>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter preferred group size" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f94-HP-6BR">
+                                                <rect key="frame" x="92" y="482" width="229" height="34"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Miscellaneous Details" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N1n-2y-26J">
+                                                <rect key="frame" x="20" y="531" width="234" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Group Size" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YWP-a2-9d8">
+                                                <rect key="frame" x="20" y="444" width="335" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Enter any other details" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FL2-Rn-8f3">
+                                                <rect key="frame" x="21" y="569" width="373" height="171"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pcQ-aS-BZn">
+                                                <rect key="frame" x="111" y="748" width="190" height="42"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal" title="Post Hike"/>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="pcQ-aS-BZn" secondAttribute="trailing" constant="113" id="0T0-Do-oU3"/>
+                                            <constraint firstItem="xgA-yn-Phz" firstAttribute="leading" secondItem="J2p-FB-bsM" secondAttribute="leading" constant="46" id="0sp-jm-6SY"/>
+                                            <constraint firstItem="pcQ-aS-BZn" firstAttribute="leading" secondItem="J2p-FB-bsM" secondAttribute="leading" constant="111" id="8Um-um-0ud"/>
+                                            <constraint firstItem="fqq-8v-33w" firstAttribute="leading" secondItem="J2p-FB-bsM" secondAttribute="leading" constant="20" symbolic="YES" id="AlW-It-iYY"/>
+                                            <constraint firstAttribute="height" constant="800" id="Dz2-kN-f5E"/>
+                                            <constraint firstItem="f94-HP-6BR" firstAttribute="top" secondItem="YWP-a2-9d8" secondAttribute="bottom" constant="8" symbolic="YES" id="EII-MM-3Lz"/>
+                                            <constraint firstAttribute="trailing" secondItem="YWP-a2-9d8" secondAttribute="trailing" constant="59" id="GxR-lW-u2O"/>
+                                            <constraint firstItem="FL2-Rn-8f3" firstAttribute="leading" secondItem="J2p-FB-bsM" secondAttribute="leading" constant="21" id="Ioh-gC-hhu"/>
+                                            <constraint firstItem="N1n-2y-26J" firstAttribute="leading" secondItem="J2p-FB-bsM" secondAttribute="leading" constant="20" symbolic="YES" id="L2d-bx-hew"/>
+                                            <constraint firstAttribute="trailing" secondItem="fqq-8v-33w" secondAttribute="trailing" constant="59" id="NhC-n6-pMt"/>
+                                            <constraint firstItem="bFr-AD-Oxr" firstAttribute="leading" secondItem="J2p-FB-bsM" secondAttribute="leading" constant="7" id="P6O-VB-ln1"/>
+                                            <constraint firstItem="xgA-yn-Phz" firstAttribute="top" secondItem="fqq-8v-33w" secondAttribute="bottom" constant="8" symbolic="YES" id="Rp7-9G-66O"/>
+                                            <constraint firstAttribute="trailing" secondItem="f94-HP-6BR" secondAttribute="trailing" constant="93" id="TqI-Sj-k0z"/>
+                                            <constraint firstAttribute="bottom" secondItem="pcQ-aS-BZn" secondAttribute="bottom" constant="10" id="ULy-db-nSc"/>
+                                            <constraint firstItem="YWP-a2-9d8" firstAttribute="top" secondItem="fqq-8v-33w" secondAttribute="bottom" constant="339" id="VzM-XM-qWw"/>
+                                            <constraint firstItem="f94-HP-6BR" firstAttribute="leading" secondItem="J2p-FB-bsM" secondAttribute="leading" constant="92" id="Ztb-A3-FWj"/>
+                                            <constraint firstAttribute="trailing" secondItem="FL2-Rn-8f3" secondAttribute="trailing" constant="20" symbolic="YES" id="a5Q-Em-40o"/>
+                                            <constraint firstAttribute="trailing" secondItem="bFr-AD-Oxr" secondAttribute="trailing" constant="9" id="ekg-yO-1rN"/>
+                                            <constraint firstItem="FL2-Rn-8f3" firstAttribute="top" secondItem="N1n-2y-26J" secondAttribute="bottom" constant="8" symbolic="YES" id="ffX-AS-5T9"/>
+                                            <constraint firstAttribute="trailing" secondItem="xgA-yn-Phz" secondAttribute="trailing" constant="48" id="fzt-4T-0Vc"/>
+                                            <constraint firstItem="pcQ-aS-BZn" firstAttribute="top" secondItem="FL2-Rn-8f3" secondAttribute="bottom" constant="8" symbolic="YES" id="lbO-Cl-ESP"/>
+                                            <constraint firstItem="fqq-8v-33w" firstAttribute="top" secondItem="bFr-AD-Oxr" secondAttribute="bottom" constant="19" id="mvw-U6-PzY"/>
+                                            <constraint firstItem="YWP-a2-9d8" firstAttribute="leading" secondItem="J2p-FB-bsM" secondAttribute="leading" constant="20" symbolic="YES" id="uTP-gu-skp"/>
+                                            <constraint firstItem="bFr-AD-Oxr" firstAttribute="top" secondItem="J2p-FB-bsM" secondAttribute="top" id="uyc-nU-SCi"/>
+                                            <constraint firstItem="N1n-2y-26J" firstAttribute="top" secondItem="f94-HP-6BR" secondAttribute="bottom" constant="15" id="wZV-vs-zVa"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="J2p-FB-bsM" firstAttribute="leading" secondItem="mPa-CS-yaA" secondAttribute="leading" id="5Td-P0-tko"/>
+                                    <constraint firstItem="J2p-FB-bsM" firstAttribute="bottom" secondItem="mPa-CS-yaA" secondAttribute="bottom" id="NlH-vR-xI2"/>
+                                    <constraint firstItem="J2p-FB-bsM" firstAttribute="top" secondItem="mPa-CS-yaA" secondAttribute="top" id="i4Q-U4-CCx"/>
+                                    <constraint firstItem="J2p-FB-bsM" firstAttribute="width" secondItem="hbl-rW-cK6" secondAttribute="width" id="kzW-uz-D3F"/>
+                                    <constraint firstItem="J2p-FB-bsM" firstAttribute="trailing" secondItem="mPa-CS-yaA" secondAttribute="trailing" id="zdF-cV-Wi2"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="mPa-CS-yaA"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="hbl-rW-cK6"/>
+                            </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="IpR-9K-NPa"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="juA-dh-AEF" firstAttribute="trailing" secondItem="IpR-9K-NPa" secondAttribute="trailing" id="HM7-BW-th1"/>
+                            <constraint firstItem="juA-dh-AEF" firstAttribute="top" secondItem="IpR-9K-NPa" secondAttribute="top" id="IL3-C3-dt8"/>
+                            <constraint firstItem="juA-dh-AEF" firstAttribute="leading" secondItem="IpR-9K-NPa" secondAttribute="leading" id="uO7-ia-9Zl"/>
+                            <constraint firstItem="juA-dh-AEF" firstAttribute="bottom" secondItem="IpR-9K-NPa" secondAttribute="bottom" id="zpQ-wc-WjM"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Create Hike" id="Oia-EY-dyZ"/>
-                    <connections>
-                        <outlet property="miscDetails" destination="dW6-qf-Vh4" id="hy6-aA-9ND"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="96b-Bz-3Yx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <customObject id="KjK-yO-HHi" customClass="RAMBounceAnimation" customModule="RAMAnimatedTabBarController"/>

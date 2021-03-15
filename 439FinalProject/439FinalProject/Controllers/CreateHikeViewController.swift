@@ -10,8 +10,8 @@ import Firebase
 
 class CreateHikeViewController : UIViewController {
     
-    @IBOutlet weak var miscDetails: UITextField!
+    //@IBOutlet weak var miscDetails: UITextField!
     override func viewDidLoad() {
-        miscDetails.borderStyle = UITextField.BorderStyle.roundedRect
+        //miscDetails.borderStyle = UITextField.BorderStyle.roundedRect
     }
 }
