@@ -76,26 +76,46 @@ class TrailMapViewController: UIViewController, MGLMapViewDelegate {
             self.mapView.removeAnnotations(annotations)
         }
         lat = self.mapView.centerCoordinate.latitude
-       lon = self.mapView.centerCoordinate.longitude
+        lon = self.mapView.centerCoordinate.longitude
         var around = 0
-        if self.mapView.zoomLevel <= 12 {
-            around = 10000
-        } else {
-            around = 1000
-        }
-        DispatchQueue.global().async {
-            let apiUrl = "https://trails-geojson.herokuapp.com/data?lat=\(self.lat)&lon=\(self.lon)&around=\(around)"
-            let url = URL(string: apiUrl)!
-            self.parseGeojson(url: url)
-            DispatchQueue.main.async() {
-                let newSource = MGLShapeSource(identifier: "trail\(self.id)", url: url, options: nil)
-                self.mapView.style?.addSource(newSource)
-                self.mapView.style?.addLines(trailID: "trail\(self.id)", from: newSource)
-                self.button.loadIndicator(false)
-                self.button.isEnabled=true
-
+        if self.mapView.zoomLevel > 9  {
+            if self.mapView.zoomLevel > 12 {
+                around = 1000
+            } else {
+                around = 10000
             }
+            
+            DispatchQueue.global().async {
+                let apiUrl = "https://trails-geojson.herokuapp.com/data?lat=\(self.lat)&lon=\(self.lon)&around=\(around)"
+                let url = URL(string: apiUrl)!
+                self.parseGeojson(url: url)
+                DispatchQueue.main.async() {
+                    let newSource = MGLShapeSource(identifier: "trail\(self.id)", url: url, options: nil)
+                    self.mapView.style?.addSource(newSource)
+                    self.mapView.style?.addLines(trailID: "trail\(self.id)", from: newSource)
+                    self.button.loadIndicator(false)
+                    self.button.isEnabled=true
+
+                }
+            }
+        } else {
+            // Create new Alert
+            let dialogMessage = UIAlertController(title: "Error", message: "That's a lot of trails! Try zooming in.", preferredStyle: .alert)
+            
+            // Create OK button with action handler
+            let ok = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
+               
+             })
+            
+            //Add OK button to a dialog message
+            dialogMessage.addAction(ok)
+            // Present Alert to
+            self.present(dialogMessage, animated: true, completion: nil)
+            button.loadIndicator(false)
+            button.isEnabled=true
         }
+        
+        
         
         
     }
@@ -175,20 +195,12 @@ class TrailMapViewController: UIViewController, MGLMapViewDelegate {
     }
 
     func mapView(_ mapView: MGLMapView, didFinishLoading style: MGLStyle) {
-
-//        let west = lat - 0.1
-//        let east = lat + 0.1
-//        let north = lon + 0.1
-//        let south = lon - 0.1
-
-//        let apiUrl = "https://trails-data.herokuapp.com/data?west=\(west)&south=\(south)&east=\(east)&north=\(north)"
         let apiUrl = "https://trails-geojson.herokuapp.com/data?lat=\(lat)&lon=\(lon)&around=1000"
         let url = URL(string: apiUrl)!
         parseGeojson(url: url)
         let source = MGLShapeSource(identifier: "trail\(id)", url: url, options: nil)
         style.addSource(source)
         style.addLines(trailID: "trail\(id)", from: source)
-        
     }
     
     func parseGeojson(url: URL) {
@@ -212,20 +224,6 @@ class TrailMapViewController: UIViewController, MGLMapViewDelegate {
     // Instantiate and return our custom callout view.
         return CustomCalloutView(representedObject: annotation)
     }
-    
-//    func mapViewRegionIsChanging(_ mapView: MGLMapView) {
-//        print(mapView.zoomLevel, "")
-//    }
-    
-    
-//    func mapView(_ mapView: MGLMapView, shouldChangeFrom oldCamera: MGLMapCamera, to newCamera: MGLMapCamera) -> Bool {
-//        let apiUrl = "https://trails-data.herokuapp.com/data?lat=\(newCamera.centerCoordinate.latitude)&lon=\(newCamera.centerCoordinate.longitude)"
-//        let url = URL(string: apiUrl)!
-//        parseGeojson(url: url)
-//
-//        return true
-//    }
-
 }
                                 
 extension MGLStyle {
