@@ -29,32 +29,32 @@ class _39FinalProjectUITests: XCTestCase {
 
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
-//        let dateTimeLabel = app.staticTexts["Date and Time Label"]
-//        let inviteFriendsLabel = app.staticTexts["Invite Friends Label"]
-//        let visibilityLabel = app.staticTexts["Visibility Label"]
-//        let groupSizeLabel = app.staticTexts["Group Size Label"]
-//        let miscLabel = app.staticTexts["Misc. Label"]
-//        let friendsListButton = app.buttons["Open Friends List Button"]
-//        let postHikeButton = app.buttons["Post Hike Button"]
-//        let visibilitySlider = app.sliders["Public Slider"]
-//        let groupSize = app.textFields["Group Size Text Field"]
-//        let details = app.textViews["Misc. Text View"]
-//        XCTAssert(inviteFriendsLabel.exists)
-//        XCTAssert(dateTimeLabel.exists)
-//        XCTAssert(visibilityLabel.exists)
-//        XCTAssert(groupSizeLabel.exists)
-//        XCTAssert(miscLabel.exists)
-//        XCTAssert(friendsListButton.exists)
-//        XCTAssert(postHikeButton.exists)
-//        XCTAssert(visibilitySlider.exists)
-//        XCTAssert(groupSize.exists)
-//        XCTAssert(details.exists)
-        
+    }
+    
+    func testCreateHikeUI() throws {
+        let app = XCUIApplication()
+        app.launch()
         app.buttons["Login"].tap()
         
         let scrollViewsQuery = app.scrollViews
-        scrollViewsQuery.otherElements.buttons["Open Friends List"].tap()
-        scrollViewsQuery.otherElements.containing(.staticText, identifier:"Date & Time").element.swipeUp()
+        let elementsQuery = scrollViewsQuery.otherElements
+        let datePickersQuery2 = elementsQuery.datePickers
+        datePickersQuery2.collectionViews.buttons["Thursday, March 18"].otherElements.containing(.staticText, identifier:"18").element.tap()
+        
+        let datePickersQuery = datePickersQuery2
+        datePickersQuery/*@START_MENU_TOKEN@*/.buttons["PM"]/*[[".otherElements[\"Time Picker\"]",".segmentedControls.buttons[\"PM\"]",".buttons[\"PM\"]"],[[[-1,2],[-1,1],[-1,0,1]],[[-1,2],[-1,1]]],[0]]@END_MENU_TOKEN@*/.tap()
+        datePickersQuery/*@START_MENU_TOKEN@*/.buttons["AM"]/*[[".otherElements[\"Time Picker\"]",".segmentedControls.buttons[\"AM\"]",".buttons[\"AM\"]"],[[[-1,2],[-1,1],[-1,0,1]],[[-1,2],[-1,1]]],[0]]@END_MENU_TOKEN@*/.tap()
+        
+        let hoursElement = datePickersQuery/*@START_MENU_TOKEN@*/.otherElements["Hours"]/*[[".otherElements[\"Time Picker\"]",".otherElements[\"Time\"].otherElements[\"Hours\"]",".otherElements[\"Hours\"]"],[[[-1,2],[-1,1],[-1,0,1]],[[-1,2],[-1,1]]],[0]]@END_MENU_TOKEN@*/
+        hoursElement.tap()
+        hoursElement.swipeUp()
+        
+        let dateTimeElement = scrollViewsQuery.otherElements.containing(.staticText, identifier:"Date & Time").element
+        dateTimeElement.swipeUp()
+        elementsQuery.textFields["Enter preferred group size"].tap()
+        dateTimeElement.swipeUp()
+        scrollViewsQuery.otherElements.containing(.staticText, identifier:"Date & Time").children(matching: .textView).element.tap()
+        elementsQuery.buttons["Post Hike"].tap()
         
     }
 
