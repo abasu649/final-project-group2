@@ -29,6 +29,33 @@ class _39FinalProjectUITests: XCTestCase {
 
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+//        let dateTimeLabel = app.staticTexts["Date and Time Label"]
+//        let inviteFriendsLabel = app.staticTexts["Invite Friends Label"]
+//        let visibilityLabel = app.staticTexts["Visibility Label"]
+//        let groupSizeLabel = app.staticTexts["Group Size Label"]
+//        let miscLabel = app.staticTexts["Misc. Label"]
+//        let friendsListButton = app.buttons["Open Friends List Button"]
+//        let postHikeButton = app.buttons["Post Hike Button"]
+//        let visibilitySlider = app.sliders["Public Slider"]
+//        let groupSize = app.textFields["Group Size Text Field"]
+//        let details = app.textViews["Misc. Text View"]
+//        XCTAssert(inviteFriendsLabel.exists)
+//        XCTAssert(dateTimeLabel.exists)
+//        XCTAssert(visibilityLabel.exists)
+//        XCTAssert(groupSizeLabel.exists)
+//        XCTAssert(miscLabel.exists)
+//        XCTAssert(friendsListButton.exists)
+//        XCTAssert(postHikeButton.exists)
+//        XCTAssert(visibilitySlider.exists)
+//        XCTAssert(groupSize.exists)
+//        XCTAssert(details.exists)
+        
+        app.buttons["Login"].tap()
+        
+        let scrollViewsQuery = app.scrollViews
+        scrollViewsQuery.otherElements.buttons["Open Friends List"].tap()
+        scrollViewsQuery.otherElements.containing(.staticText, identifier:"Date & Time").element.swipeUp()
+        
     }
 
     func testLaunchPerformance() throws {

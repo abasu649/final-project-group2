@@ -479,7 +479,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 53LNJW9687;
+				DEVELOPMENT_TEAM = KW4CP7S7VT;
 				INFOPLIST_FILE = 439FinalProjectUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -498,7 +498,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 53LNJW9687;
+				DEVELOPMENT_TEAM = KW4CP7S7VT;
 				INFOPLIST_FILE = 439FinalProjectUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -518,7 +518,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 53LNJW9687;
+				DEVELOPMENT_TEAM = KW4CP7S7VT;
 				INFOPLIST_FILE = 439FinalProjectTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -538,7 +538,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 53LNJW9687;
+				DEVELOPMENT_TEAM = KW4CP7S7VT;
 				INFOPLIST_FILE = 439FinalProjectTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
