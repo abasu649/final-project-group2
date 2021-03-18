@@ -2,7 +2,11 @@
 //  _39FinalProjectTests.swift
 //  439FinalProjectTests
 //
+<<<<<<< Updated upstream
 //  Created by Anamika Basu on 3/16/21.
+=======
+//  Created by Anamika Basu on 3/17/21.
+>>>>>>> Stashed changes
 //
 
 import XCTest
@@ -21,7 +25,10 @@ class _39FinalProjectTests: XCTestCase {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
+<<<<<<< Updated upstream
     
+=======
+>>>>>>> Stashed changes
 
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
